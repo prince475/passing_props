@@ -1,0 +1,28 @@
+
+1. what do props help us accomplish?
+
+Make a component more reusable
+
+2. How do you pass a prop into a component
+
+just the same way we pass attributes to an html element
+<MyName title="prince">
+
+3. Can I pass a custom prop (e.g. `blahblah={true}`) to a native DOM element?
+(e.g. <div blahblah={true}>)
+No
+Because the JSX we use to describe native DOMelemnts will be turned into
+REAL DOM elements by React. And Real DOM elements only have the properties
+/attributes specified in the HTML specification. (which doesn't include properties like blahblah)
+
+4. How do I receive props in a component
+
+function Navbar(props) {
+  return (
+    <header>
+      {props.value}
+
+    </header>
+  )
+}
+# props essentially are just objects with key, value pairs
